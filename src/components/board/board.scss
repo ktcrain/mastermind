@@ -1,0 +1,14 @@
+.Board {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.Board-Page {
+  width: 100%;
+}

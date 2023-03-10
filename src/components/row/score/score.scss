@@ -1,0 +1,24 @@
+.Score {
+  display: flex;
+  flex-wrap: wrap;
+  background: #333;
+  &-Peg {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &-Inner {
+        padding: 0 auto;
+        &-Display {
+            border: 0.5rem solid #666;
+            border-radius: 0.5rem;
+        }
+        &-Display--black {
+            border-color: #000;
+        }
+        &-Display--white {
+            border-color: #fff;
+        }
+      }
+  }
+}

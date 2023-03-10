@@ -1,0 +1,74 @@
+@import '../../styles/index.scss';
+// @import 'fonts.scss';
+// @import 'buttons.scss';
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.App-header,
+.App-main,
+.App-footer {
+  width: 100%;
+  min-height: 2em;
+  font-family: 'PressStart2P';
+}
+
+.App-header {
+  color: #fff;
+  font-size: #{"min(max(0.75rem, 2vw), 1.5rem)"};
+  &-eyebrow {
+    color: #{$pink};
+    display:block;
+    font-size: 0.5em;
+    margin: 1em auto;
+    text-shadow: 0.125em 0.125em 0 #{$black};
+  }
+  h2 {
+    font-size: 0.75em;
+    line-height: 2em;
+  }
+}
+
+.App-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  justify-content: flex-start; // center game vertically
+  padding: 2rem 0;
+}
+
+.App-footer {
+  box-shadow: 0 0 20px 10px rgba(0,0,0,0.3);
+  background: black;
+  color: #fff;
+  line-height: 2em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  font-size: #{"min(max(0.75rem, 2vw), 1rem)"};
+  > section {
+    max-width: 1550px;
+    padding: 1em;
+    margin: 1em;
+    h2 {
+      margin: 2rem auto;
+      text-align: center;
+    }
+    p {
+      max-width: 900px;
+      margin: 2rem auto;
+    }
+    ul {
+       margin-block-end: 2em;
+    }
+  }
+}

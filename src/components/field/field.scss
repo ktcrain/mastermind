@@ -1,0 +1,23 @@
+.Field {
+  width: 100%;
+  max-width: 34rem; // [TODO] -var here
+  display: flex;
+  flex-direction: column-reverse;
+  text-align: center;
+  padding: 0.5rem;
+  background: #333;
+}
+
+// [TODO] Field stretches across full-width
+// and each row has a different background color
+// creating stripes as the user plays
+
+// $black: #25211b;
+// $white: #fff;
+// $red: #d42122;
+// $orange: #e87a15;
+// $yellow: #f5cc17;
+// $green: #4d9445;
+// $blue: #377dc5;
+// $brown: #9c5a37;
+// $pink: #ff7fac;

@@ -1,0 +1,12 @@
+.Row {
+  background: #999;
+  display: flex;
+  width: 100%;
+  padding: 0.5rem;
+  border-bottom: 0.0625rem dashed #ccc;
+  // column-reverse makes first item
+  // in css the last in js
+  &:first-child {
+      border-bottom: 0;
+  }
+}

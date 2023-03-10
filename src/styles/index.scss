@@ -1,0 +1,35 @@
+@import 'colors.scss';
+@import 'fonts.scss';
+@import 'buttons.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html { font: 100%/1.5 }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // background: repeating-radial-gradient(
+  //   circle,
+  //   $blue,
+  //   $blue 0.75rem,
+  //   $green 0.75rem,
+  //   $green 1.5rem,
+  // ),
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.5),
+    rgba(255,64,64,0.5),
+  );
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

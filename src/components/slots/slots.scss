@@ -1,0 +1,91 @@
+// [TODO]? global variables
+@import "../../styles/colors.scss";
+
+.Slots {
+  display: flex;
+  flex: 1 1;
+}
+
+// [TODO move to Slot- and prefix
+.Slot {
+  flex: 1 1;
+  display: flex;
+  border-right: 0.0625rem dashed #ccc;
+  &:last-child {
+    border: 0;
+  }
+  &-Inner {
+    cursor: pointer;
+    margin: 0 auto;
+    border: 1rem groove #ccc;
+    background: #ccc;
+    border-radius: 2rem;
+    position: relative;
+  }
+}
+
+// [TODO move to Slot- and prefix
+.Selection {
+  position: relative;
+  &-Display {
+    cursor: pointer;
+    border: 0.75rem solid #666;
+    border-radius: 0.75rem;
+    @each $name, $hex, $textColor in $guessColors {
+      &--#{$name} {
+        border-color: $hex;
+      }
+    }
+    &--Hidden {
+      background: #ccc;
+      border-color: transparent;
+      &:before {
+        content: "?";
+        position: absolute;
+        width: 1.5rem;
+        text-align: center;
+        margin: 0.25rem 0;
+        line-height: 1rem;
+        top: 0;
+        left: 0;
+        text-align: center;
+      }
+    }
+  }
+
+  &-Selector {
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    top: 1rem;
+    left: -0.75rem;
+    display: none;
+    visibility: hidden;
+
+    &--Show {
+      display: block;
+      visibility: visible;
+    }
+
+    &-Option {
+      width: 3.5rem;
+      height: 1.25rem;
+      line-height: 1.25rem;
+      font-size: 1rem;
+      font-family: monospace;
+      user-select: none;
+      @each $name, $hex, $textColor in $guessColors {
+        &--#{$name} {
+          background: #{$hex};
+          color: #{$textColor};
+        }
+        &--#{$name}:hover {
+          background: lighten($hex, 10%);
+        }
+      }
+    }
+  }
+}
